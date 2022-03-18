@@ -1,0 +1,27 @@
+<!-- nav -->
+
+<nav class="navbar navbar-expand navbar-dark bg-dark" >
+
+  <div class="navbar-nav">
+
+      <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+
+      <a class="nav-item nav-link taxt-align center" routerLink="/users" routerLinkActive="active">Users</a>
+
+      <a class="nav-item nav-link" >Logout</a>
+
+  </div>
+
+</nav>
+
+
+
+<!-- main app container -->
+
+<div class="app-container col-md-6 offset-md-3 mt-5" >
+
+  <!-- <alert></alert> -->
+
+  <router-outlet></router-outlet>
+
+</div>

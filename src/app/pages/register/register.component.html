@@ -1,0 +1,78 @@
+<div class="card">
+    <h4 class="card-header">Register</h4>
+    <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" formControlName="fullname" class="form-control"  />
+                <div *ngIf="form.controls['fullname'].touched && !form.controls['fullname'].valid" class="invalid-feedback">
+                    fullname is required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="username">Email:</label>
+                <input type="text" formControlName="username" class="form-control"  />
+                <div *ngIf="form.controls['username'].touched && !form.controls['username'].valid" class="invalid-feedback">
+                    username is required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" formControlName="password" class="form-control"  />
+                <div *ngIf="form.controls['password'].touched && !form.controls['password'].valid" class="invalid-feedback">
+                    password is required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="mobileno">Mobile:</label>
+                <input type="number" formControlName="mobileno" class="form-control" />
+                <div *ngIf="form.controls['city'].touched && !form.controls['city'].valid" class="invalid-feedback">
+                    city is required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" formControlName="city" class="form-control" />
+                <div *ngIf="form.controls['city'].touched && !form.controls['city'].valid" class="invalid-feedback">
+                    city is required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="dob">DOB:</label>
+                <input type="date" formControlName="dob" class="form-control" />
+                <div *ngIf="form.controls['dob'].touched && !form.controls['dob'].valid" class="invalid-feedback">
+                    dob is required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="state">State:</label>
+                <input type="text" formControlName="state" class="form-control" />
+                <div *ngIf="form.controls['state'].touched && !form.controls['state'].valid" class="invalid-feedback">
+                    state is required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="qualification">Qualification:</label>
+                <input type="text" formControlName="qualification" class="form-control" />
+                <div *ngIf="form.controls['qualification'].touched && !form.controls['qualification'].valid" class="invalid-feedback">
+                    qualification is required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="year">Year of
+                    completion:</label>
+                <input type="text" formControlName="year" class="form-control" />
+                <div *ngIf="form.controls['year'].touched && !form.controls['year'].valid" class="invalid-feedback">
+                    >year is required
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" [disabled]="form.valid">
+                    <!-- <span class="spinner-border spinner-border-sm mr-1"></span> -->
+                    Register
+                </button>
+                <a routerLink="../login" class="btn btn-link">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
